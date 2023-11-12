@@ -3,6 +3,29 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-architecture-constraints]]
 == Architecture Constraints
 
+.Technical constraints
+
+[options="header",cols="1,1"]
+|===
+|Constraint|Background and/or motivation
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+|===
+
+.Organizational constraints
+
+[options="header",cols="1,1"]
+|===
+|Constraint|Background and/or motivation
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+| _insert_constraint_here_ | _insert_motivation_here_
+|===
 
 ifdef::arc42help[]
 [role="arc42help"]
@@ -19,7 +42,6 @@ Simple tables of constraints with explanations.
 If needed you can subdivide them into
 technical constraints, organizational and political constraints and
 conventions (e.g. programming or versioning guidelines, documentation or naming conventions)
-
 
 .Further Information
 
