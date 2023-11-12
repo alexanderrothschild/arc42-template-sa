@@ -96,7 +96,7 @@ endif::arc42help[]
 [options="header",cols="1,2,2"]
 |===
 |Role/Name|Contact|Expectations
-| _Customer_ | _<Contact-1>_ | _1. What is your business? What are you doing? +
+| _Customer_ | _<Landlord>_ | _1. What is your business? What are you doing? +
                                 Answer: +
                                 2. What challenges you want to solve throughout the project? +
                                 3. Are there any existing systems that need to be integrated? +
