@@ -3,7 +3,6 @@ ifndef::imagesdir[:imagesdir: ../src/images]
 [[section-runtime-view]]
 == Runtime View
 
-
 ifdef::arc42help[]
 [role="arc42help"]
 ****
