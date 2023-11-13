@@ -40,7 +40,7 @@ endif::arc42help[]
 
 User interaction with _project_name_ and error handling is pretty basic and simple.
 
-=== <Runtime Scenario 1>
+=== <Runtime Scenario 1 (Login procedure)>
 
 The following is the use case of the login procedure.
 
@@ -49,6 +49,8 @@ image::login.jpg[]
 * _<insert runtime diagram or textual description of the scenario>_
 * _<insert description of the notable aspects of the interactions between the
 building block instances depicted in this diagram.>_
+
+- TODO: add other runtime scenarios.
 
 === <Runtime Scenario 2>
 

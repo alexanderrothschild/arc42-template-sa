@@ -5,6 +5,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 .Technical constraints
 
+- TODO
+
 [options="header",cols="1,2,3"]
 |===
 |Nr.|Constraint|Background and/or motivation
@@ -17,11 +19,13 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 .Organizational constraints
 
+- TOFINISH
+
 [options="header",cols="1,2,3"]
 |===
 |Nr.|Constraint|Background and/or motivation
 | OC1 | User data location | All the personal data about users have to be stored in Germany +
-                             or at least in a EU country for privacy reasons.
+                             or at least in a EU country, for privacy reasons.
 | OC2 | Use of AWS | All the datas have to stored in cloud like AWS.
 | OC3 | _insert_constraint_here_ | _insert_motivation_here_
 | OC4 | _insert_constraint_here_ | _insert_motivation_here_

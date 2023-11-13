@@ -7,4 +7,6 @@
 
 // where are images located?
 :imagesdir: ./images
-:arc42help:
+
+// disable help texts for pdf rendering
+:!arc42help:
