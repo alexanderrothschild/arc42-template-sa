@@ -46,6 +46,10 @@ endif::arc42help[]
 
 === Infrastructure Level 1
 
+Main deployment diagram for the Housing System.
+
+image::C4 Model Deployment Diagram for Housing System.jpg[]
+
 ifdef::arc42help[]
 [role="arc42help"]
 ****
