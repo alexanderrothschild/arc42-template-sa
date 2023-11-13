@@ -1,4 +1,4 @@
-ifndef::imagesdir[:imagesdir: ../src/images]
+ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-runtime-view]]
 == Runtime View
@@ -38,9 +38,9 @@ See https://docs.arc42.org/section-6/[Runtime View] in the arc42 documentation.
 ****
 endif::arc42help[]
 
-=== <Runtime Scenario 1>
-
 User interaction with _project_name_ and error handling is pretty basic and simple.
+
+=== <Runtime Scenario 1>
 
 The following is the use case of the login procedure.
 

@@ -17,7 +17,7 @@ These include
 **** 
 endif::arc42help[]
 
-_project_name_ is an amministrative system for a landlord that rents houses.
+_project_name_ is an administrative system for a landlord that rents houses.
 It's main goals are to facilitate the landlord to administrate the followings:
 * rental objects
 * tennants
@@ -36,16 +36,18 @@ Another purpose is to create a portal for the tennants to pat for the rent and t
 .Motivation
 The landlord asked for a system that helps him to keep track of everything he think it's important for the administration of his rental objects. He asked for this project because right now he is working with Excel sheets and he is keeping every information updated "manually". This project aims to shift this manual work to an automated system.
 
+.Brainstorming process 
+
 === Quality Goals
 
 [options="header",cols="1,2,2"]
 |===
 |Nr.|Quality|Motivation
-| 1 | _insert_quality_here_ | _insert_motivation_here_
-| 2 | _insert_quality_here_ | _insert_motivation_here_
-| 3 | _insert_quality_here_ | _insert_motivation_here_
-| 4 | _insert_quality_here_ | _insert_motivation_here_
-| 5 | _insert_quality_here_ | _insert_motivation_here_
+| 1 | _insert_quality_goal_here_ | _insert_motivation_here_
+| 2 | _insert_quality_goal_here_ | _insert_motivation_here_
+| 3 | _insert_quality_goal_here_ | _insert_motivation_here_
+| 4 | _insert_quality_goal_here_ | _insert_motivation_here_
+| 5 | _insert_quality_goal_here_ | _insert_motivation_here_
 |===
 
 === Stakeholders
