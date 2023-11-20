@@ -3,7 +3,6 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-context-and-scope]]
 == Context and Scope
 
-
 ifdef::arc42help[]
 [role="arc42help"]
 ****
@@ -22,7 +21,6 @@ Various options:
 * Context diagrams
 * Lists of communication partners and their interfaces.
 
-
 .Further Information
 
 See https://docs.arc42.org/section-3/[Context and Scope] in the arc42 documentation.
@@ -31,6 +29,11 @@ See https://docs.arc42.org/section-3/[Context and Scope] in the arc42 documentat
 endif::arc42help[]
 
 === Business Context
+
+This section describes the environment and context of the Housing system at a high level: 
+Who uses the system and on which other system does the it depend.
+
+image::business context diagram.jpg[]
 
 ifdef::arc42help[]
 [role="arc42help"]

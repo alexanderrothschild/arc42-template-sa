@@ -2,7 +2,6 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-deployment-view]]
 
-
 == Deployment View
 
 ifdef::arc42help[]
@@ -46,6 +45,10 @@ endif::arc42help[]
 
 === Infrastructure Level 1
 
+Main deployment diagram for the Housing System.
+
+image::C4 Model Deployment Diagram for Housing System.jpg[]
+
 ifdef::arc42help[]
 [role="arc42help"]
 ****
@@ -75,6 +78,8 @@ _<description of the mapping>_
 
 
 === Infrastructure Level 2
+
+- TODO: add other level of infrastructure if needed.
 
 ifdef::arc42help[]
 [role="arc42help"]

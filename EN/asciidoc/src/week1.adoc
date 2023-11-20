@@ -1,48 +1,48 @@
-ifndef::imagesdir[:imagesdir: ../images]
+== Basic ideas
 
-[[section-introduction-and-goals]]
-== Introduction and Goals
+....
+a software design architecture to process all the info related to heat fee, including functions of collecting info from sensors, managing when the resident moves out, charging fees etc. Interact mainly with two types of user, resident as normal users and managers and system maintainers as admins
 
-ifdef::arc42help[]
-[role="arc42help"]
-****
-Describes the relevant requirements and the driving forces that software architects and development team must consider. 
-These include
 
-* underlying business goals, 
-* essential features, 
-* essential functional requirements, 
-* quality goals for the architecture and
-* relevant stakeholders and their expectations
-**** 
-endif::arc42help[]
+use mermaid to create a diagram Create a coarse boxes and arrows diagram (only most basic components) to give yourself a better first overview of the system’s requirements.
+....
 
-Housing system is an administrative system for a landlord that rents houses.
-It's main goals are to facilitate the landlord to administrate the followings:
-* rental objects
-* tennants
-* service charge billings
-The project should also give the tennants a portal to check their daily consumptions of heating energy and water.
-...
+[source,mermaid]
+----
+graph TD
 
-This is a project of Alexander Rothschild, Hantao Zhou, Marco Campione.
+subgraph "User Interface"
+  A((Resident))
+  B((Manager/Admin))
+end
 
-=== Requirements Overview
+subgraph "Application Layer"
+  C[User Authentication]
+  D[Data Processing]
+  E[Resident Management]
+  F[Fee Charging]
+  G[Sensor Data Collection]
+end
 
-.Contents
-The main purpose of Housing system is keeping track of all the rental objects, tennants informations, billings, consumptions and sensor management so that the landlord has all the informations updated.
-Another purpose is to create a portal for the tennants to pat for the rent and the services
+subgraph "Data Storage"
+  H[Resident Data]
+  I[Fee Information]
+  J[Sensor Data]
+end
 
-.Motivation
-The landlord asked for a system that helps him to keep track of everything he think it's important for the administration of his rental objects. He asked for this project because right now he is working with Excel sheets and he is keeping every information updated "manually". This project aims to shift this manual work to an automated system.
+A -->|Access| C
+B -->|Access| C
+A -->|Utilizes| D
+B -->|Utilizes| D
+C -->|Uses| E
+C -->|Uses| F
+C -->|Uses| G
+D -->|Manipulates| H
+D -->|Manipulates| I
+D -->|Manipulates| J
+----
 
-=== Basic ideas and Brainstorming
-
-A software design architecture to process all the info related to heat fee, including functions of collecting info from sensors, managing when the resident moves out, charging fees etc. Interact mainly with two types of user, resident as normal users and managers and system maintainers as admins.
-
-We used mermaid to create a diagram Create a coarse boxes and arrows diagram (only most basic components) to give yourself a better first overview of the system’s requirements.
-
-image:mermaid diagram.jpg[]
+== task 5
 
 [width="100%",cols="41%,59%",options="header",]
 |===
@@ -343,100 +343,3 @@ should have access to replacement parts and sensors as needed.
 heating system. 2. Maintenance personnel are adequately trained to
 handle sensor replacements.
 |===
-
-=== Quality Goals
-
-- TODO
-
-////
-Edit when we have some quality goals to add!
-
-[options="header",cols="1,2,2"]
-|===
-|Nr.|Quality|Motivation
-| 1 | _insert_quality_goal_here_ | _insert_motivation_here_
-| 2 | _insert_quality_goal_here_ | _insert_motivation_here_
-| 3 | _insert_quality_goal_here_ | _insert_motivation_here_
-| 4 | _insert_quality_goal_here_ | _insert_motivation_here_
-| 5 | _insert_quality_goal_here_ | _insert_motivation_here_
-|===
-////
-
-=== Stakeholders
-
-[options="header",cols="1,1,2"]
-|===
-|Role/Name|Contact|Expectations
-| _Customer_ | _<Landlord>_ | _1. What is your business? What are you doing? +
-                                Answer: landlord/house owner +
-                                2. What challenges you want to solve throughout the project? +
-                                Answer: Automation of the processes, integrate billing system, management of the sensor system, etc ... +
-                                3. Are there any existing systems that need to be integrated? +
-                                Answer: excel sheets (not sure) +
-                                4. What is your product and for whom is it? Who is your target audience? +
-                                Answer: the product is mainly for him, there is no need to generalize to a wider target audience +
-                                5. Is it important for you what technologies are going to be used by us? +
-                                Answer: Didn't seem that the customer cared about the technologies +
-                                6. What are the project risks for your company? +
-                                Answer: He hasn't said anything about it +
-                                7. What are the deadlines? Till what time what should be ready? +
-                                Answer: He hasn't said anything about it +
-                                8. If it is a REST app do your have the REST endpoints or should we develop them on your side? +
-                                Answer: He hasn't said anything about it +
-                                9. What is the projects budget? +
-                                Answer: He hasn't said anything about it +
-                                10. How many people are there in the project and how many you need? +
-                                Answer: He hasn't said anything about it +
-                                11. Are there any software architecture constraints that we should know about (architectural pattern or design pattern)? +
-                                Answer: He hasn't said anything about it +
-                                12. Ask about that: the building block view shows the static decomposition of the system into building blocks (modules,
-                                components, subsystems, classes, interfaces, packages, libraries, frameworks, layers, partitions, tiers, functions,
-                                macros, operations, data structures, ...) as well as their dependencies (relationships, associations, ...) +
-                                Answer: He hasn't said anything about it +
-                                13. Make sure that we know:
-                                * important use cases or features: how do building blocks execute them?
-                                * interactions at critical external interfaces: how do building blocks cooperate with users and neighboring systems?
-                                * operation and administration: launch, start-up, stop
-                                * error and exception scenarios +
-                                Answer: He hasn't said anything about it +
-                                14. What is your technical infrastructure used to execute your system, with infrastructure elements like geographical
-                                locations, environments, computers, processors, channels and net topologies as well as other infrastructure elements and
-                                mapping of (software) building blocks to that infrastructure elements. +
-                                Answer: He hasn't said anything about it +
-                                15. Do you have production/test systems, should we build them? +
-                                Answer: He hasn't said anything about it
-|===
-
-==== Stakeholder Interest and Impact Table
-
-[options="header",cols="1,4,1,1"]
-|=====
-
-|Stakeholder|Interests|Estimated Project Impact|Estimated Priority
-| _Owner_ |                     _Achieve targets +
-Avoid liability_ |                          _Med + +
-High-_ | _1_
-| _Sponsor_ |                   _Save money through an all-in-one service
-instead of filling excel sheets and processing payments separately_ |       _Med +_ | _3_
-| _Project Manager (Lecturer)_ | _Keeping owner/sponsor and team members
-satisfied with the project in general through providing a connection between them_ | _High +_ | _2_
-| _Team Members_ |              _New product excitement +
-Pass an exam in the semester end_ |                     _Med + +
-Med +_ | _4_
-| _Tenants_ | _Want to have a comfortable online service_ |                 _Low-_ | _5_
-
-|=====
-
-==== Interest-Influence Classification
-
-[options="header",cols="1,1,1,4"]
-|=====
-
-|Stakeholder|Estimated Project Influence|Estimated Project Importance|Assumptions and Risks
-| _Owner_ | _High (10)_ | _Low (2)_ | _Providing all the resources, but his requirements a bit vague _
-| _Sponsor_ | _High (10)_ | _Medium (6)_ | _Assuming we have one for this particular project, we are not sure if additional funding will be provided, when and if needed_
-| _Project Manager (Lecturer)_ | _High (10)_ | _High (10)_ | _Likes the new project. Risks tied to explaining the requirements to team members_
-| _Team Members_ | _Medium (6)_ | _High (10)_ | _Almost all the members are glad to work on a new project. Though one member dropped it almost at the start. Additional training required_
-| _Tenants_ | _High (8)_ | _Low (1)_ | _Gladly use the comfortable new service. Financial risks if payment or other service fails_
-
-|=====

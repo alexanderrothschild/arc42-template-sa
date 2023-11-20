@@ -3,6 +3,34 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-architecture-constraints]]
 == Architecture Constraints
 
+.Technical constraints
+
+- TODO
+
+[options="header",cols="1,2,3"]
+|===
+|Nr.|Constraint|Background and/or motivation
+| TC1 | _insert_constraint_here_ | _insert_motivation_here_
+| TC2 | _insert_constraint_here_ | _insert_motivation_here_
+| TC3 | _insert_constraint_here_ | _insert_motivation_here_
+| TC4 | _insert_constraint_here_ | _insert_motivation_here_
+| TC5 | _insert_constraint_here_ | _insert_motivation_here_
+|===
+
+.Organizational constraints
+
+- TOFINISH
+
+[options="header",cols="1,2,3"]
+|===
+|Nr.|Constraint|Background and/or motivation
+| OC1 | User data location | All the personal data about users have to be stored in Germany +
+                             or at least in a EU country, for privacy reasons.
+| OC2 | Use of AWS | All the datas have to stored in cloud like AWS.
+| OC3 | _insert_constraint_here_ | _insert_motivation_here_
+| OC4 | _insert_constraint_here_ | _insert_motivation_here_
+| OC5 | _insert_constraint_here_ | _insert_motivation_here_
+|===
 
 ifdef::arc42help[]
 [role="arc42help"]
@@ -19,7 +47,6 @@ Simple tables of constraints with explanations.
 If needed you can subdivide them into
 technical constraints, organizational and political constraints and
 conventions (e.g. programming or versioning guidelines, documentation or naming conventions)
-
 
 .Further Information
 
