@@ -46,6 +46,8 @@ endif::arc42help[]
 
 === Quality Tree
 
+image:qualitytree.jpg[]
+
 ifdef::arc42help[]
 [role="arc42help"]
 ****
