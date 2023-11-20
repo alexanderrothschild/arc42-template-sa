@@ -1,6 +1,23 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-quality-scenarios]]
+
+=== Quality Requirements
+[options="header",cols="1,4,4"]
+|===
+
+|Quality Attribute|Changeability|Flexibility
+| _Availability_ | _low_ | _low_
+| _Deploy-ability_ | _low_ | _high_
+| _Integrability_ | _medium_ | _medium_
+| _Modifiability_ | _medium_ |_high_
+| _Performance_ | _low_ | _medium_
+| _Safety_ | _low_ | _low_
+| _Security_ | _low_ | _low_
+| _Testability_ | _high_ | _high_
+| _Usability_ | _high_ | _high_
+|===
+
 == Quality Requirements
 
 

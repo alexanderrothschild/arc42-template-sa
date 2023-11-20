@@ -406,3 +406,37 @@ Edit when we have some quality goals to add!
                                 15. Do you have production/test systems, should we build them? +
                                 Answer: He hasn't said anything about it
 |===
+
+==== Stakeholder Interest and Impact Table
+
+[options="header",cols="1,4,1,1"]
+|=====
+
+|Stakeholder|Interests|Estimated Project Impact|Estimated Priority
+| _Owner_ |                     _Achieve targets +
+Avoid liability_ |                          _Med + +
+High-_ | _1_
+| _Sponsor_ |                   _Save money through an all-in-one service
+instead of filling excel sheets and processing payments separately_ |       _Med +_ | _3_
+| _Project Manager (Lecturer)_ | _Keeping owner/sponsor and team members
+satisfied with the project in general through providing a connection between them_ | _High +_ | _2_
+| _Team Members_ |              _New product excitement +
+Pass an exam in the semester end_ |                     _Med + +
+Med +_ | _4_
+| _Tenants_ | _Want to have a comfortable online service_ |                 _Low-_ | _5_
+
+|=====
+
+==== Interest-Influence Classification
+
+[options="header",cols="1,1,1,4"]
+|=====
+
+|Stakeholder|Estimated Project Influence|Estimated Project Importance|Assumptions and Risks
+| _Owner_ | _High (10)_ | _Low (2)_ | _Providing all the resources, but his requirements a bit vague _
+| _Sponsor_ | _High (10)_ | _Medium (6)_ | _Assuming we have one for this particular project, we are not sure if additional funding will be provided, when and if needed_
+| _Project Manager (Lecturer)_ | _High (10)_ | _High (10)_ | _Likes the new project. Risks tied to explaining the requirements to team members_
+| _Team Members_ | _Medium (6)_ | _High (10)_ | _Almost all the members are glad to work on a new project. Though one member dropped it almost at the start. Additional training required_
+| _Tenants_ | _High (8)_ | _Low (1)_ | _Gladly use the comfortable new service. Financial risks if payment or other service fails_
+
+|=====
