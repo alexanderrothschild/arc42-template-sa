@@ -420,14 +420,14 @@ image:Stakeholder.jpg[Stakeholder, align="center"]
 Avoid liability_ |                          _Med + +
 High-_ | _1_
 | _Sponsor_ |                   _Save money through an all-in-one service
-instead of filling excel sheets and processing payments separately_ |       _Med +_ | _3_
+instead of filling excel sheets and processing payments separately_ |       _Med +_ | _4_
 | _Project Manager (Lecturer)_ | _Keeping owner/sponsor and team members
 satisfied with the project in general through providing a connection between them_ | _High +_ | _2_
 | _Team Members_ |              _New product excitement +
 Pass an exam in the semester end_ |                     _Med + +
-Med +_ | _4_
-| _Tenants_ | _Want to have a comfortable online service_ |                 _Low-_ | _5_
-
+Med +_ | _5_
+| _Tenants_ | _Want to have a comfortable online service_ |                 _Low-_ | _6_
+| _Legal Department_ | _Wants everything to be according to the law and/or regulations_ |                 _High-_ | _3_
 |=====
 
 ==== Interest-Influence Classification
@@ -441,5 +441,5 @@ Med +_ | _4_
 | _Project Manager (Lecturer)_ | _High (10)_ | _High (10)_ | _Likes the new project. Risks tied to explaining the requirements to team members_
 | _Team Members_ | _Medium (6)_ | _High (10)_ | _Almost all the members are glad to work on a new project. Though one member dropped it almost at the start. Additional training required_
 | _Tenants_ | _High (8)_ | _Low (1)_ | _Gladly use the comfortable new service. Financial risks if payment or other service fails_
-
+| _Legal Department_ | _High (7)_ | _High (7)_ | _Different possible legal risks_
 |=====
