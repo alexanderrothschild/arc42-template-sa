@@ -3,9 +3,26 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-quality-scenarios]]
 
 === Quality Requirements
-[options="header",cols="1,4,4"]
+
+.Architectural sensitive requirements
+[options="header",cols="1,2,3,1,1"]
+|===
+|ASR|Quality requirement|Description|Changeability|Flexibility
+| asr1 | x | x | x | x 
+| asr2 | x | x | x | x
+| asr3 | x | x | x | x
+| asr4 | x | x | x | x
+| asr5 | x | x | x | x 
+| asr6 | x | x | x | x
+| asr7 | x | x | x | x
+| asr8 | x | x | x | x
+| asr9 | x | x | x | x
+| asr10 | x | x | x | x
 |===
 
+# todo: remove this table!
+[options="header",cols="1,4,4"]
+|===
 |Quality Attribute|Changeability|Flexibility
 | _Availability_ | _low_ | _low_
 | _Deploy-ability_ | _low_ | _high_
