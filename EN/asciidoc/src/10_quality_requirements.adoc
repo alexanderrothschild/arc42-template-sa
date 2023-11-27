@@ -86,6 +86,70 @@ In any case the tree should include links to the scenarios of the following sect
 endif::arc42help[]
 
 === Quality Scenarios
+==== Availability
+[options="header",cols="1,4,4"]
+|===
+|Portion of Scenario|Description|Possible Value
+| _Source_ | _webservice unavailable_ | _external to system request_
+| _Stimulus_ | _timing_ | _timing, fault (503 Message)_
+| _Artifact_ | _communication channel_ | _communication channel_
+| _Environment_ | _normal operation/overload with requests_ |_normal operation/overload with requests_
+| _Response_ | _log failure and notify operator via alarm_ | _log failure and notify operator via
+alarm_
+| _Response Measure_ | _no downtime_ | _downtime = 0_
+|===
+
+==== Performance
+[options="header",cols="1,4,4"]
+|===
+|Portion of Scenario|Description|Possible Value
+| _Source_ | _external, internal_ | _external: website loading takes relatively "too much"_
+| _Stimulus_ | _event arrival pattern_ | _sporadic_
+| _Artifact_ | _system services_ | _system_
+| _Environment_ | _normal, overload_ |_normal mode_
+| _Response_ | _change operation mode_ | _remain in normal mode, log timing_
+| _Response Measure_ | _latency, deadline, throughput, jitter, miss rate, data loss_ | _timing_
+|===
+
+==== Security
+[options="header",cols="1,4,4"]
+|===
+|Portion of Scenario|Description|Possible Value
+| _Source_ | _user/system, known/unknown_ | _unauthorized user_
+| _Stimulus_ | _attack to display info, change info, access services and info, deny services_ | _tries to disable system_
+| _Artifact_ | _services, data_ | _system service_
+| _Environment_ | _online/offline, connected or disconnected_ |_online_
+| _Response_ | _authentication, authorization, encryption, logging, demand monitoring_ | _block access_
+| _Response Measure_ | _time, probability of detection, recovery_ | _service is available within 1 minute_
+|===
+
+==== Modifiability
+[options="header",cols="1,4,4"]
+|===
+|Portion of Scenario|Description|Possible Value
+| _Source_ | _developer, system administrator, user_ | _end user_
+| _Stimulus_ | _add/delete/modify function or quality_ | _wishes to change fields of a downloadable document_
+| _Artifact_ | _UI, platform, environment, external system_ | _list of available documents to download_
+| _Environment_ | _design, compile, build, run time_ |_runtime_
+| _Response_ | _make change, test it, deploy it_ | _user finds option to change fields in the downloadable document_
+| _Response Measure_ | _effort, time, cost, risk_ | _field change and download occurs without error logs_
+|===
+
+==== Testability
+[options="header",cols="1,4,4"]
+|===
+|Portion of Scenario|Description|Possible Value
+| _Source_ | _developer, tester, user_ | _system tester_
+| _Stimulus_ | _project milestone completed_ | _integration completed_
+| _Artifact_ | _design, code component, system_ | _whole system_
+| _Environment_ | _design, development, compile, deployment, or run time_ |_development time_
+| _Response_ | _can be controlled to perform the desired test and results observed_ | _all functionality can be
+controlled and observed_
+| _Response Measure_ | _coverage, probability of finding additional faults given a fault, time to test_ | _entire
+regression test suite completed in less than 24 hours_
+|===
+
+
 
 ifdef::arc42help[]
 [role="arc42help"]
