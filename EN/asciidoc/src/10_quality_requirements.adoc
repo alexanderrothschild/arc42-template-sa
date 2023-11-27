@@ -8,13 +8,13 @@ ifndef::imagesdir[:imagesdir: ../images]
 [options="header",cols="1,2,3,1,1"]
 |===
 |ASR|Quality requirement|Description|Changeability|Flexibility
-| asr1 | x | x | x | x 
-| asr2 | x | x | x | x
-| asr3 | x | x | x | x
-| asr4 | x | x | x | x
-| asr5 | x | x | x | x 
-| asr6 | x | x | x | x
-| asr7 | x | x | x | x
+| asr1 | Integrability | The payment gateway used by the system goes under an API version update. | Medium | Medium
+| asr2 | Security | A security breach exposes sensitive user data, leading to unauthorized access to personal information | Low | Low
+| asr3 | Availability | Scheduled maintenance causes downtime, impacting users attempting to view or rent properties. | Medium  | High
+| asr4 | Deployability | The system needs to be deployed on a new cloud provider due to cost considerations | High | High
+| asr5 | Deployability | A deployment introduces unforeseen issues, and a rollback is required. | Medium| Medium 
+| asr6 | Testability | A change in one module unintentionally affects the functionality of another. | Medium | Medium
+| asr7 | Usability | Tenants provide feedback on specific points in the rental payment process. | High | High
 | asr8 | x | x | x | x
 | asr9 | x | x | x | x
 | asr10 | x | x | x | x
@@ -81,7 +81,6 @@ The quality tree is a high-level overview of the quality goals and requirements:
 * a mind map with quality categories as main branches
 
 In any case the tree should include links to the scenarios of the following section.
-
 
 ****
 endif::arc42help[]
