@@ -5,37 +5,19 @@ ifndef::imagesdir[:imagesdir: ../images]
 === Quality Requirements
 
 .Architectural sensitive requirements
-[options="header",cols="1,2,3,1,1"]
+[options="header",cols="1,2,1,1"]
 |===
-|ASR|Quality requirement|Description|Changeability|Flexibility
-| asr1 | Integrability | The payment gateway used by the system goes under an API version update. | Medium | Medium
-| asr2 | Security | A security breach exposes sensitive user data, leading to unauthorized access to personal information | Low | Low
-| asr3 | Availability | Scheduled maintenance causes downtime, impacting users attempting to view or rent properties. | Medium  | High
-| asr4 | Deployability | The system needs to be deployed on a new cloud provider due to cost considerations | High | High
-| asr5 | Deployability | A deployment introduces unforeseen issues, and a rollback is required. | Medium| Medium 
-| asr6 | Testability | A change in one module unintentionally affects the functionality of another. | Medium | Medium
-| asr7 | Usability | Tenants provide feedback on specific points in the rental payment process. | High | High
-| asr8 | x | x | x | x
-| asr9 | x | x | x | x
-| asr10 | x | x | x | x
+|Quality requirement|Description|Changeability|Flexibility
+| Integrability | The ability of a system to seamlessly integrate with other systems or components, ensuring smooth communication and data exchange. | Medium | Medium
+|  Security | Measures and features implemented to protect a system from unauthorized access, data breaches, and other security threats. | Low | Low
+| Availability | Ensuring that a system is consistently accessible and operational, minimizing downtime and disruptions. | Medium  | High
+| Deployability | TThe ease with which a system can be installed, configured, and deployed in various environments, ensuring a smooth and efficient deployment process. | High | High
+| Testability | The degree to which a system facilitates testing, making it easier to identify and fix bugs or issues during development and maintenance. | Medium | Medium
+| Usability | The extent to which a system is user-friendly and provides a positive user experience, considering factors such as ease of use, learnability, and efficiency. | High | High
+| Maintainability |  The ease with which a system can be maintained and updated over time, including aspects like code readability, modularity, and the ability to make changes without causing disruptions. | High | Medium
+| Performance | The efficiency and responsiveness of a system under various conditions, including factors such as response time, throughput, and resource utilization. | High | Medium
+| Modifiability | The ease with which a system can be modified or adapted to accommodate changes in requirements, evolving technology, or business needs. This includes aspects like code flexibility, scalability, and the ability to introduce new features without extensive rework. | Medium | Medium
 |===
-
-# todo: remove this table!
-[options="header",cols="1,4,4"]
-|===
-|Quality Attribute|Changeability|Flexibility
-| _Availability_ | _low_ | _low_
-| _Deploy-ability_ | _low_ | _high_
-| _Integrability_ | _medium_ | _medium_
-| _Modifiability_ | _medium_ |_high_
-| _Performance_ | _low_ | _medium_
-| _Safety_ | _low_ | _low_
-| _Security_ | _low_ | _low_
-| _Testability_ | _high_ | _high_
-| _Usability_ | _high_ | _high_
-|===
-
-== Quality Requirements
 
 
 ifdef::arc42help[]
@@ -61,9 +43,128 @@ See https://docs.arc42.org/section-10/[Quality Requirements] in the arc42 docume
 ****
 endif::arc42help[]
 
+
+
+=== Quality Scenarios
+==== Availability
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description with possible values
+| _ID_ | ASR1
+| _Source_ | webservice unavailable
+| _Stimulus_ | timing 
+| _Artifact_ | communication channel 
+| _Environment_ | normal operation/overload with requests 
+| _Response_ | log failure and notify operator via alarm
+alarm_
+| _Response Measure_ | no downtime
+|===
+
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description with possible values
+| ID | ASR2
+| _Source_ | scheduled maintenance
+| _Stimulus_ | causes downtime
+| _Artifact_ | system
+| _Environment_ | under normal maintenance 
+| _Response_ | quick maintenance
+| _Response Measure_ | no downtime
+|===
+
+==== Performance
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description with possible values
+| _ID_ | ASR3
+| _Source_ | external, internal 
+| _Stimulus_ | event arrival pattern 
+| _Artifact_ | system services
+| _Environment_ | normal, overload
+| _Response_ | change operation mode
+| _Response Measure_ | latency, deadline, throughput, jitter, miss rate, data loss
+|===
+
+==== Security
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description with possible values
+| _ID_ | ASR4
+| _Source_ | user/system, known/unknown, unauthorized user
+| _Stimulus_ | attack to display info, change info, access services and info, deny services, tries to disable system
+| _Artifact_ | services, data 
+| _Environment_ | online/offline, connected or disconnected
+| _Response_ | authentication, authorization, encryption, logging, demand monitoring
+| _Response Measure_ | time, probability of detection, recovery, service is available within 1 minute
+|===
+
+==== Modifiability
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description with possible values
+| _ID_ | ASR5
+| _Source_ | developer, system administrator, user
+| _Stimulus_ | add/delete/modify function or quality, wishes to change fields of a downloadable document
+| _Artifact_ | UI, platform, environment, external system
+| _Environment_ | design, compile, build, runtime
+| _Response_ | make change, test it, deploy it
+| _Response Measure_ | effort, time, cost, risk, field change and download occurs without error logs
+|===
+
+==== Testability
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description and possible Value
+| _ID_ | ASR6
+| _Source_ | developer, tester, user
+| _Stimulus_ | project milestone completed
+| _Artifact_ | design, code component, system
+| _Environment_ | design, development, compile, deployment, or run time
+| _Response_ | can be controlled to perform the desired test and results observed
+| _Response Measure_ | coverage, probability of finding additional faults given a fault, time to test, entire regression test suite completed in less than 24 hours
+|===
+
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description with possible values
+| ID | ASR7
+| _Source_ | developer, tester
+| _Stimulus_ | a change in one module unintentionally affects functionality of another
+| _Artifact_ | code component, system
+| _Environment_ | under normal testing
+| _Response_ | rollback
+| _Response Measure_ | no downtime
+|===
+
+==== Usability
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description and possible Value
+| _ID_ | ASR8
+| _Source_ | user
+| _Stimulus_ | the tenant wants to set up a recurring payment for monthly rent on the rental payment portal
+| _Artifact_ | interface, system
+| _Environment_ | normal use of the system
+| _Response_ | the system set the recurring payment
+| _Response Measure_ | quick time response, value changed or not
+|===
+
+==== Integrability
+[options="header",cols="1,4"]
+|===
+|Portion of Scenario|Description and possible Value
+| _ID_ | ASR9
+| _Source_ | external system
+| _Stimulus_ | a third-party payment gateway needs to be integrated with the system
+| _Artifact_ | system, api
+| _Environment_ | normal development
+| _Response_ | all the other parts of the system should be perfectly integrated with the payment gateway
+| _Response Measure_ | effort and time spent to integrate the gateway
+|===
+
 === Quality Tree
 
-image:qualitytree.jpg[]
+image:tree.png[]
 
 ifdef::arc42help[]
 [role="arc42help"]
@@ -84,72 +185,6 @@ In any case the tree should include links to the scenarios of the following sect
 
 ****
 endif::arc42help[]
-
-=== Quality Scenarios
-==== Availability
-[options="header",cols="1,4,4"]
-|===
-|Portion of Scenario|Description|Possible Value
-| _Source_ | _webservice unavailable_ | _external to system request_
-| _Stimulus_ | _timing_ | _timing, fault (503 Message)_
-| _Artifact_ | _communication channel_ | _communication channel_
-| _Environment_ | _normal operation/overload with requests_ |_normal operation/overload with requests_
-| _Response_ | _log failure and notify operator via alarm_ | _log failure and notify operator via
-alarm_
-| _Response Measure_ | _no downtime_ | _downtime = 0_
-|===
-
-==== Performance
-[options="header",cols="1,4,4"]
-|===
-|Portion of Scenario|Description|Possible Value
-| _Source_ | _external, internal_ | _external: website loading takes relatively "too much"_
-| _Stimulus_ | _event arrival pattern_ | _sporadic_
-| _Artifact_ | _system services_ | _system_
-| _Environment_ | _normal, overload_ |_normal mode_
-| _Response_ | _change operation mode_ | _remain in normal mode, log timing_
-| _Response Measure_ | _latency, deadline, throughput, jitter, miss rate, data loss_ | _timing_
-|===
-
-==== Security
-[options="header",cols="1,4,4"]
-|===
-|Portion of Scenario|Description|Possible Value
-| _Source_ | _user/system, known/unknown_ | _unauthorized user_
-| _Stimulus_ | _attack to display info, change info, access services and info, deny services_ | _tries to disable system_
-| _Artifact_ | _services, data_ | _system service_
-| _Environment_ | _online/offline, connected or disconnected_ |_online_
-| _Response_ | _authentication, authorization, encryption, logging, demand monitoring_ | _block access_
-| _Response Measure_ | _time, probability of detection, recovery_ | _service is available within 1 minute_
-|===
-
-==== Modifiability
-[options="header",cols="1,4,4"]
-|===
-|Portion of Scenario|Description|Possible Value
-| _Source_ | _developer, system administrator, user_ | _end user_
-| _Stimulus_ | _add/delete/modify function or quality_ | _wishes to change fields of a downloadable document_
-| _Artifact_ | _UI, platform, environment, external system_ | _list of available documents to download_
-| _Environment_ | _design, compile, build, run time_ |_runtime_
-| _Response_ | _make change, test it, deploy it_ | _user finds option to change fields in the downloadable document_
-| _Response Measure_ | _effort, time, cost, risk_ | _field change and download occurs without error logs_
-|===
-
-==== Testability
-[options="header",cols="1,4,4"]
-|===
-|Portion of Scenario|Description|Possible Value
-| _Source_ | _developer, tester, user_ | _system tester_
-| _Stimulus_ | _project milestone completed_ | _integration completed_
-| _Artifact_ | _design, code component, system_ | _whole system_
-| _Environment_ | _design, development, compile, deployment, or run time_ |_development time_
-| _Response_ | _can be controlled to perform the desired test and results observed_ | _all functionality can be
-controlled and observed_
-| _Response Measure_ | _coverage, probability of finding additional faults given a fault, time to test_ | _entire
-regression test suite completed in less than 24 hours_
-|===
-
-
 
 ifdef::arc42help[]
 [role="arc42help"]
