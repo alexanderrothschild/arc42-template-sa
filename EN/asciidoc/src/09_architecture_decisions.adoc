@@ -3,6 +3,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-design-decisions]]
 == Architecture Decisions
 
+=== Table of involved stakeholders
+
 [orientation=landscape, options="header", cols="1,2,2,1"]
 |===
 | Name 
@@ -44,6 +46,21 @@ ifndef::imagesdir[:imagesdir: ../images]
 | The legal department needs both structural (Deployment diagram) and behavioral (Sequence Diagrams and Mockup/Wireframe) diagrams.
 
 |===
+
+=== UML Diagrams
+
+==== Component diagram 
+
+image:C4 Model Deployment Diagram for Housing System.jpg[]
+
+==== Sequence diagram
+
+image:login.jpg[]
+
+==== Mockup/Wireframe for password reset
+image:mockup-reset-pw.png[]
+
+==== Deployment diagram (insert here)
 
 ifdef::arc42help[]
 [role="arc42help"]
