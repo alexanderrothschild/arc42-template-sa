@@ -23,31 +23,28 @@ Microservices architecture is a design approach where a software application is 
 
 ==== Risks:
 
-1. **Complexity:** 
-- **Issue:** Managing a distributed system with numerous microservices can be complex. Coordinating communication between services, dealing with distributed data management, and ensuring overall system coherence require careful design and operational practices.
-- **Mitigation:** Implement robust monitoring, logging, and tracing to aid in debugging. Use appropriate tools and frameworks to manage the complexity, and ensure teams have the necessary skills.
-2. **Data Management:** 
+1. **Data Management:** 
 - **Issue:** Microservices often have their own databases, which can lead to challenges in maintaining data consistency across services.
 - **Mitigation:** Implement strategies like eventual consistency, use distributed transactions carefully, and employ techniques such as API gateways or event-driven architectures to handle data synchronization.
-3. **Service Discovery and Communication:** 
+2. **Service Discovery and Communication:** 
 - **Issue:** Dynamic service discovery and communication between microservices can introduce latency and network-related issues.
 - **Mitigation:** Use service mesh solutions, API gateways, and appropriate protocols to manage service discovery and communication. Implement retries and timeouts to handle transient failures.
-4. **Security Concerns:** 
+3. **Security Concerns:** 
 - **Issue:** Microservices architecture introduces additional attack vectors, and securing communication between services is crucial.
 - **Mitigation:** Implement proper authentication and authorization mechanisms. Use secure communication protocols (e.g., HTTPS) and regularly update security practices and policies.
 
 ---
 
 === Service-Oriented Architecture (Alternative Solution)
-Service-Oriented Architecture (SOA) is an architectural style that involves organizing software systems as a set of loosely coupled, independently deployable services. While SOA has several benefits, it also comes with its challenges. Here are three benefits and three drawbacks of Service-Oriented Architecture:
+Service-Oriented Architecture (SOA) is an architectural style that involves organizing software systems as a set of loosely coupled, independently deployable services. It has a better maintainability compared to a full monolithic architecture, and also is not completely separated compared to a microservices architecture. While SOA has several benefits for our solution, it also comes with its set of challenges.
 
 ==== Benefits:
 
 1. **Reusability and Modularity:** SOA promotes the development of modular and reusable services. Each service encapsulates a specific functionality and can be reused in different parts of an application or across different applications. This improves development efficiency and reduces redundancy.
 
-2. **Interoperability:** SOA facilitates interoperability between different software systems and technologies. Services communicate using standard protocols like HTTP and can be implemented in various programming languages. This enables organizations to integrate diverse systems, including legacy applications, in a more seamless manner.
+2. **Interoperability:** SOA facilitates interoperability between different software systems and technologies. Services communicate using standard protocols and can be implemented in various programming languages. This enables organizations to integrate diverse systems.
 
-3. **Scalability and Flexibility:** SOA allows for better scalability by enabling the independent scaling of individual services. This flexibility is particularly valuable in dynamic environments where the demand for certain services may vary. It also facilitates easier adaptation to changes and updates in technology or business requirements.
+3. **Flexibility:** The flexibility is particularly valuable in dynamic environments where the demand for certain services may vary. It also facilitates easier adaptation to changes and updates in technology or business requirements.
 
 ==== Drawbacks:
 
@@ -59,33 +56,31 @@ Service-Oriented Architecture (SOA) is an architectural style that involves orga
 
 ==== Risks:
 
-1. **Service Availability and Reliability:**
+1. **Dependency Management:**
+   - **Issue:** Changes in one service may impact other dependent services, leading to potential disruptions.
+   - **Mitigation:** Implement version control for services and use service registries to manage dependencies. Define clear service contracts and communication protocols. Establish change management processes to assess the impact of modifications before deployment. Employ automated testing and continuous integration practices to catch integration issues early.
+
+2. **Service Availability and Reliability:**
    - **Issue:** Services may experience downtime, affecting the overall system availability.
    - **Mitigation:** Implement redundancy and failover mechanisms for critical services. Use load balancing to distribute traffic across multiple instances of a service. Regularly monitor and perform testing to identify and address potential points of failure.
 
-2. **Data Security and Privacy:**
+3. **Data Security and Privacy:**
    - **Issue:** Sharing data between services may lead to security vulnerabilities or unauthorized access.
    - **Mitigation:** Implement strong authentication and authorization mechanisms. Encrypt sensitive data during transmission and storage. Conduct regular security audits and penetration testing to identify and address vulnerabilities. Define and enforce data access policies.
-
-3. **Interoperability and Versioning:**
-   - **Issue:** Changes to a service's interface or data format may cause compatibility issues with dependent services.
-   - **Mitigation:** Design robust service contracts with backward compatibility. Implement versioning strategies for services to allow for gradual migration. Use standardized data formats (e.g., JSON, XML) and protocols (e.g., REST, SOAP) to enhance interoperability. Establish communication standards and documentation.
 
 4. **Performance Bottlenecks:**
    - **Issue:** Increased complexity in a distributed system may lead to performance bottlenecks and degraded response times.
    - **Mitigation:** Conduct performance testing to identify and optimize bottlenecks. Implement caching mechanisms for frequently accessed data. Utilize content delivery networks (CDNs) for static content. Monitor system performance in real-time and scale infrastructure as needed.
 
-5. **Dependency Management:**
-   - **Issue:** Changes in one service may impact other dependent services, leading to potential disruptions.
-   - **Mitigation:** Implement version control for services and use service registries to manage dependencies. Define clear service contracts and communication protocols. Establish change management processes to assess the impact of modifications before deployment. Employ automated testing and continuous integration practices to catch integration issues early.
-
 --- 
 === Payment module
 
-==== Existing Payment Module:
+==== Existing Payment Service:
 
-1. **Benefit:**
+1. **Benefits:**
 - **Time and Cost Efficiency:** Utilizing an existing payment module can significantly reduce development time and costs. Ready-made solutions are often well-tested and come with documentation, saving resources that would be spent on coding, testing, and troubleshooting.
+
+- **Familiarity:** Users would be much more familiar using an existing Payment gateway (eg. PayPal) compared to a custom payment system.
 
 2. **Drawback:**
 - **Limited Customization:** While existing modules offer convenience, they may have limitations in terms of customization. If your project requires highly specialized features or a unique user experience, you might find it challenging to tailor the module to fit your exact needs.
@@ -93,7 +88,7 @@ Service-Oriented Architecture (SOA) is an architectural style that involves orga
 3. **Risk:**
 - **Dependency on Third-Party:** Relying on an external payment module means your project is dependent on a third-party service. If the external provider faces issues like downtime, security breaches, or discontinuation of support, your payment functionality may be adversely affected.
 
-==== Custom Payment Module:
+==== Custom Payment Service:
 
 1. **Benefit:**
 - **Customization Control:** Building your own payment module provides full control over customization. You can tailor the solution to precisely match your business requirements, ensuring a unique and seamless integration with your application.
@@ -103,7 +98,7 @@ Service-Oriented Architecture (SOA) is an architectural style that involves orga
 
 3. **Risk:**
 - **Security Concerns:** Creating a payment module involves handling sensitive financial information. If not implemented securely, it can pose a risk of data breaches and compromise user trust. Ensuring compliance with industry standards and best practices is crucial to mitigate these risks.
----
+
 === IOT module
 
 ==== Cloud-Based Solution:
@@ -130,7 +125,7 @@ Service-Oriented Architecture (SOA) is an architectural style that involves orga
 
 === Ticket module
 
-### Existing Ticketing Solution:
+==== Existing Ticketing Solution:
 
 1. **Benefits:**
 - **Time Efficiency:** Implementing an existing ticketing solution can save a significant amount of time compared to developing one from scratch. This is because these solutions are often feature-rich and ready to use.
@@ -141,7 +136,7 @@ Service-Oriented Architecture (SOA) is an architectural style that involves orga
 3. **Risks:**
 - **Customization Limitations:** Existing solutions might not fully align with unique business processes, and customization options could be limited. This might lead to compromises in workflow efficiency.
 
-### Develop a Ticketing Solution In-House:
+==== Develop a Ticketing Solution In-House:
 
 1. **Benefits:**
 - **Customization:** Building your own ticketing system allows for tailoring the solution to fit the specific needs and workflows of your organization. This can enhance overall efficiency and user satisfaction.
@@ -155,24 +150,23 @@ Service-Oriented Architecture (SOA) is an architectural style that involves orga
 [%always]
 <<<
 
-
 [options="header"]
 |=================================================================================================================================================================================================================================
 | ASRs                           | Basic architecture style   |                               | Payment Service          |                        | IOT Service |                | Ticket Service          |                      
 |                                | Microservices architecture | Service Oriented Architecture | Existing Payment Service | Custom Payment Service | Cloud based | Edge computing | Existing Ticket Service | Custom Ticket Service
-| Availabilty                    | ++                         | o                             | ++                       | o                      | ++          | o              | +                       | -                    
-| Performance                    | o                          | ++                            | o                        | ++                     | o           | ++             | o                       | ++                   
-| Security                       | -                          | ++                            | ++                       | ++                     | o           | ++             | -                       | ++                   
-| Modifiability                  | ++                         | +                             | +                        | o                      | ++          | +              | ++                      | +                    
-| Testabilty                     | ++                         | +                             | ++                       | +                      | ++          | +              | ++                      | +                    
-| Usability                      | o                          | o                             | +                        | +                      | -           | o              | o                       | o                    
-| Integrability                  | ++                         | +                             | ++                       | +                      | ++          | +              | +                       | o                    
+| ASR1                    | ++                         | o                             | ++                       | o                      | ++          | o              | +                       | -                    
+| ASR2                    | o                          | ++                            | o                        | ++                     | o           | ++             | o                       | ++                   
+| ASR3                       | -                          | ++                            | ++                       | ++                     | o           | ++             | -                       | ++                   
+| ASR4                  | ++                         | +                             | +                        | o                      | ++          | +              | ++                      | +                    
+| ASR5                     | ++                         | +                             | ++                       | +                      | ++          | +              | ++                      | +                    
+| ASR6                      | o                          | o                             | +                        | +                      | -           | o              | o                       | o                    
+| ASR7                  | ++                         | +                             | ++                       | +                      | ++          | +              | +                       | o                    
 |                                |                            |                               |                          |                        |             |                |                         |                      
-| Record and change heating fees | +                          | +                             | +                        | +                      | +           | +              | +                       | +                    
-| Register new tenant            | +                          | +                             | +                        | +                      | o           | o              | +                       | +                    
-| Handle Tenant Rent Delay       | +                          | +                             | +                        | +                      | +           | +              | ++                      | +                    
-| Update system security         | +                          | ++                            | o                        | +                      | +           | ++             | +                       | ++                   
-| Handle Broken Heat Sensor      | ++                         | o                             | ++                       | o                      | +           | -              | ++                      | o                    
+| UC1 | +                          | +                             | +                        | +                      | +           | +              | +                       | +                    
+| UC2            | +                          | +                             | +                        | +                      | o           | o              | +                       | +                    
+| UC3       | +                          | +                             | +                        | +                      | +           | +              | ++                      | +                    
+| UC4         | +                          | ++                            | o                        | +                      | +           | ++             | +                       | ++                   
+| UC5      | ++                         | o                             | ++                       | o                      | +           | -              | ++                      | o                    
 |=================================================================================================================================================================================================================================
 
 
