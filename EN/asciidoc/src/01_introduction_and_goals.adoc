@@ -20,9 +20,9 @@ endif::arc42help[]
 Housing system is an administrative system for a landlord that rents houses.
 It's main goals are to facilitate the landlord to administrate the followings:
 * rental objects
-* tennants
+* tenants
 * service charge billings
-The project should also give the tennants a portal to check their daily consumptions of heating energy and water.
+The project should also give the tenants a portal to check their daily consumptions of heating energy and water.
 ...
 
 This is a project of Alexander Rothschild, Hantao Zhou, Marco Campione.
@@ -30,11 +30,11 @@ This is a project of Alexander Rothschild, Hantao Zhou, Marco Campione.
 === Requirements Overview
 
 .Contents
-The main purpose of Housing system is keeping track of all the rental objects, tennants informations, billings, consumptions and sensor management so that the landlord has all the informations updated.
-Another purpose is to create a portal for the tennants to pat for the rent and the services
+The main purpose of Housing system is keeping track of all the rental objects, tenants information, billings, consumptions and sensor management so that the landlord has all the informations updated.
+Another purpose is to create a portal for the tenants to pat for the rent and the services
 
 .Motivation
-The landlord asked for a system that helps him to keep track of everything he think it's important for the administration of his rental objects. He asked for this project because right now he is working with Excel sheets and he is keeping every information updated "manually". This project aims to shift this manual work to an automated system.
+The landlord asked for a system that helps him to keep track of everything he thinks it's important for the administration of his rental objects. He asked for this project because right now he is working with Excel sheets and he is keeping every information updated "manually". This project aims to shift this manual work to an automated system.
 
 === Basic ideas and Brainstorming
 
@@ -349,7 +349,7 @@ image:Stakeholder.jpg[Stakeholder, align="center"]
 Avoid liability_ |                          _Med + +
 High-_ | _1_
 | _Sponsor_ |                   _Save money through an all-in-one service
-instead of filling excel sheets and processing payments separately_ |       _Med +_ | _4_
+instead of filling Excel sheets and processing payments separately_ |       _Med +_ | _4_
 | _Project Manager (Lecturer)_ | _Keeping owner/sponsor and team members
 satisfied with the project in general through providing a connection between them_ | _High +_ | _2_
 | _Team Members_ |              _New product excitement +

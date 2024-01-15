@@ -60,14 +60,15 @@ image:login.jpg[]
 ==== Mockup/Wireframe for password reset
 image:mockup-reset-pw.png[]
 
-==== Deployment diagram (insert here)
+==== Deployment diagram
+image:Deployment Diagram with Components.jpg[]
 
 ifdef::arc42help[]
 [role="arc42help"]
 ****
 .Contents
 Important, expensive, large scale or risky architecture decisions including rationales.
-With "decisions" we mean selecting one alternative based on given criteria.
+With "decisions", we mean selecting one alternative based on given criteria.
 
 Please use your judgement to decide whether an architectural decision should be documented
 here in this central section or whether you better document it locally

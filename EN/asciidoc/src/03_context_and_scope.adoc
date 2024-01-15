@@ -31,7 +31,7 @@ endif::arc42help[]
 === Business Context
 
 This section describes the environment and context of the Housing system at a high level: 
-Who uses the system and on which other system does the it depend.
+Who uses the system and on which other system does it depend.
 
 image::business context diagram.jpg[]
 

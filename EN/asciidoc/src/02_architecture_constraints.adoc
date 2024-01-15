@@ -26,7 +26,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 |Nr.|Constraint|Background and/or motivation
 | OC1 | User data location | All the personal data about users have to be stored in Germany +
                              or at least in a EU country, for privacy reasons.
-| OC2 | Use of AWS | All the datas have to stored in cloud like AWS.
+| OC2 | Use of AWS | All the data have to stored in cloud like AWS.
 | OC3 | _insert_constraint_here_ | _insert_motivation_here_
 | OC4 | _insert_constraint_here_ | _insert_motivation_here_
 | OC5 | _insert_constraint_here_ | _insert_motivation_here_
