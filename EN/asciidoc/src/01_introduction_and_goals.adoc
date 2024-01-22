@@ -17,20 +17,21 @@ These include
 **** 
 endif::arc42help[]
 
-Housing system is an administrative system for a landlord that rents houses.
+This is a project of Alexander Rothschild and Marco Campione.
+
+_Housing system_ is an administrative system for a landlord that rents houses.
 It's main goals are to facilitate the landlord to administrate the followings:
 * rental objects
 * tenants
 * service charge billings
 The project should also give the tenants a portal to check their daily consumptions of heating energy and water.
-...
 
-This is a project of Alexander Rothschild, Hantao Zhou, Marco Campione.
+We'd like to thank our teachers Marion Wiese and Prof. Dr. André van Hoorn.
 
 === Requirements Overview
 
-.Contents
-The main purpose of Housing system is keeping track of all the rental objects, tenants information, billings, consumptions and sensor management so that the landlord has all the informations updated.
+.What is Housing system?
+The main purpose of _Housing system_ is keeping track of all the rental objects, tenants information, billings, consumptions and sensor management so that the landlord has all the informations updated.
 Another purpose is to create a portal for the tenants to pat for the rent and the services
 
 .Motivation
@@ -40,7 +41,7 @@ The landlord asked for a system that helps him to keep track of everything he th
 
 A software design architecture to process all the info related to heat fee, including functions of collecting info from sensors, managing when the resident moves out, charging fees etc. Interact mainly with two types of user, resident as normal users and managers and system maintainers as admins.
 
-We used mermaid to create a diagram Create a coarse boxes and arrows diagram (only most basic components) to give yourself a better first overview of the system’s requirements.
+We used _Mermaid_ to create a diagram consisting of coarse boxes and arrows (only most basic components) to give ourselves a better first overview of the system's requirements.
 
 image:mermaid diagram.jpg[]
 
@@ -293,50 +294,44 @@ external service providers.
 
 === Stakeholders
 
-[options="header",cols="1,1,2"]
-|===
-|Role/Name|Contact|Expectations
-| _Customer_ | _<Landlord>_ | 1. What is your business? What are you doing? +
-                                Answer: landlord/house owner +
-                                2. What challenges you want to solve throughout the project? +
-                                Answer: Automation of the processes, integrate billing system, management of the sensor system, etc ... +
-                                3. Are there any existing systems that need to be integrated? +
-                                Answer: excel sheets (not sure) +
-                                4. What is your product and for whom is it? Who is your target audience? +
-                                Answer: the product is mainly for him, there is no need to generalize to a wider target audience +
-                                5. Is it important for you what technologies are going to be used by us? +
-                                Answer: Didn't seem that the customer cared about the technologies +
-                                6. What are the project risks for your company? +
-                                Answer: He hasn't said anything about it +
-                                7. What are the deadlines? Till what time what should be ready? +
-                                Answer: He hasn't said anything about it +
-                                8. If it is a REST app do your have the REST endpoints or should we develop them on your side? +
-                                Answer: He hasn't said anything about it +
-                                9. What is the projects budget? +
-                                Answer: He hasn't said anything about it +
-                                10. How many people are there in the project and how many you need? +
-                                Answer: He hasn't said anything about it +
-                                11. Are there any software architecture constraints that we should know about (architectural pattern or design pattern)? +
-                                Answer: He hasn't said anything about it +
-                                12. Ask about that: the building block view shows the static decomposition of the system into building blocks (modules,
-                                components, subsystems, classes, interfaces, packages, libraries, frameworks, layers, partitions, tiers, functions,
-                                macros, operations, data structures, ...) as well as their dependencies (relationships, associations, ...) +
-                                Answer: He hasn't said anything about it +
-                                13. Make sure that we know:
-                                * important use cases or features: how do building blocks execute them?
-                                * interactions at critical external interfaces: how do building blocks cooperate with users and neighboring systems?
-                                * operation and administration: launch, start-up, stop
-                                * error and exception scenarios +
-                                Answer: He hasn't said anything about it +
-                                14. What is your technical infrastructure used to execute your system, with infrastructure elements like geographical
-                                locations, environments, computers, processors, channels and net topologies as well as other infrastructure elements and
-                                mapping of (software) building blocks to that infrastructure elements. +
-                                Answer: He hasn't said anything about it +
-                                15. Do you have production/test systems, should we build them? +
-                                Answer: He hasn't said anything about it
-|===
+This section is about the the most important personas and entities for the design and realization of this application.
+
+==== Customer first interview
+We initially created this list of questions to ask the Landlord (and main customer of the project).
+Some of the questions never received a direct answer from the Landlord, but we still decided to report them here for completeness:
+
+. _Question_: What is your business? What are you doing? +
+  _Answer_: I'm a landlord and house owner.
+. _Question_: What challenges you want to solve throughout the project? +              
+  _Answer_: Automation of the processes, integration of the billing system, management of the sensor system, etc ... 
+. _Question_: Are there any existing systems that need to be integrated? +
+  _Answer_: Excel sheets (not sure).
+. _Question_: What is your product and for whom is it? Who is your target audience? +
+  _Answer_: The product is mainly for me, there is no need to generalize to a wider target audience.
+. _Question_: Is it important for you what technologies are going to be used by us? +
+  _Answer_: No.
+. _Question_: What are the project risks for your company? +
+  _Answer_: *No answer*
+. _Question_: What are the deadlines? Till what time what should be ready?
+  _Answer_: End of the lecture period.
+. _Question_: Is it a REST app? Do your have the REST endpoints or should we develop them on your side? +
+  _Answer_: *No answer*
+. _Question_: What is the projects budget? +
+  _Answer_: *No answer*
+. _Question_: Do you have production/test systems, should we build them? +
+  _Answer_: *No answer*
+
+==== Stakeholder list
+* Owner (Landlord)
+* Team members
+* Sponsor
+* Legal Department
+* Tenants (Users)
+* Project Manager
 
 ==== Stakeholder Influence and Importance Matrix
+The next diagram shows how the stakeholders are placed in 2 axis, one representing the influence and the other one the importance that those stakeholder have on the success of the project.
+
 image:Stakeholder.jpg[Stakeholder, align="center"]
 
 ==== Stakeholder Interest and Impact Table
