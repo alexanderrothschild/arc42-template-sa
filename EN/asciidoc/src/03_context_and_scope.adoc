@@ -1,7 +1,6 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-context-and-scope]]
-== Context and Scope
 
 ifdef::arc42help[]
 [role="arc42help"]
@@ -28,12 +27,22 @@ See https://docs.arc42.org/section-3/[Context and Scope] in the arc42 documentat
 ****
 endif::arc42help[]
 
+== Context and Scope
+
+This chapter describes the environment and context of _Housing system_: Who uses the system and on which other system does _Housing system_ depend.
+
 === Business Context
 
-This section describes the environment and context of the Housing system at a high level: 
-Who uses the system and on which other system does it depend.
-
+.Business context diagram
 image::business context diagram.jpg[]
+
+* _Tennant_: A person that uses _Housing system_ to manage his house payments, consumptions, personal data and documents, etc.
+
+* _Landlord_: The person that uses _Housing system_ to manage his rental objects (houses), his tenants, the service charge billings, IoI devices, etc.
+
+* _Bank Account_
+
+* _IoT Devices_
 
 ifdef::arc42help[]
 [role="arc42help"]
@@ -54,12 +63,6 @@ The title of the table is the name of your system, the three columns contain the
 ****
 endif::arc42help[]
 
-**<Diagram or Table>**
-
-**<optionally: Explanation of external domain interfaces>**
-
-=== Technical Context
-
 ifdef::arc42help[]
 [role="arc42help"]
 ****
@@ -75,9 +78,3 @@ together with a mapping table showing the relationships between channels and inp
 
 ****
 endif::arc42help[]
-
-**<Diagram or Table>**
-
-**<optionally: Explanation of technical interfaces>**
-
-**<Mapping Input/Output to Channels>**

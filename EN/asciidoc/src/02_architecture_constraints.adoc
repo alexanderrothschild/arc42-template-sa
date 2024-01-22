@@ -3,10 +3,11 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-architecture-constraints]]
 == Architecture Constraints
 
+The few constraints on this project are reflected in the final solution. This section shows them and their motivation.
+
 .Technical constraints
 
-- TODO
-
+.List of Technical Constraints
 [options="header",cols="1,2,3"]
 |===
 |Nr.|Constraint|Background and/or motivation
@@ -19,8 +20,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 .Organizational constraints
 
-- TOFINISH
-
+.List of Technical Constraints
 [options="header",cols="1,2,3"]
 |===
 |Nr.|Constraint|Background and/or motivation

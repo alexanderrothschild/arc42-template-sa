@@ -43,8 +43,10 @@ A software design architecture to process all the info related to heat fee, incl
 
 We used _Mermaid_ to create a diagram consisting of coarse boxes and arrows (only most basic components) to give ourselves a better first overview of the system's requirements.
 
+.Diagram with coarse boxes and arrows
 image:mermaid diagram.jpg[]
 
+.UC001
 [width="100%",cols="41%,59%",options="header",]
 |===
 |*Use Case ID and Name* |UC001 - Record and Charge Heating Fees
@@ -87,6 +89,7 @@ per the rental agreement. 2. The heating system is equipped with meters
 or sensors to measure consumption accurately.
 |===
 
+.UC002
 [width="100%",cols="48%,52%",options="header",]
 |===
 |*Use Case ID and Name* |UC002 - Register New Tenant
@@ -132,6 +135,7 @@ registration.
 property. 2. The property is in a suitable condition for occupancy.
 |===
 
+.UC003
 [width="100%",cols="45%,55%",options="header",]
 |===
 |*Use Case ID and Name* |UC003 - Handle Tenant Rent Delay
@@ -185,6 +189,7 @@ regarding rent payments and late fees. 2. Both parties are expected to
 communicate through the system for transparency.
 |===
 
+.UC004
 [width="100%",cols="45%,55%",options="header",]
 |===
 |*Use Case ID and Name* |UC004 - Update System Security
@@ -238,6 +243,7 @@ of the system’s architecture and security requirements. 2. Relevant
 stakeholders are informed about the scheduled security update.
 |===
 
+.UC005
 [width="100%",cols="44%,56%",options="header",]
 |===
 |*Use Case ID and Name* |UC005 - Handle Broken Heat Sensor
@@ -332,10 +338,12 @@ Some of the questions never received a direct answer from the Landlord, but we s
 ==== Stakeholder Influence and Importance Matrix
 The next diagram shows how the stakeholders are placed in 2 axis, one representing the influence and the other one the importance that those stakeholder have on the success of the project.
 
+.Stakeholder Influence and Importance Matrix
 image:Stakeholder.jpg[Stakeholder, align="center"]
 
 ==== Stakeholder Interest and Impact Table
 
+.Stakeholder Interest and Impact Table
 [options="header",cols="1,4,1,1"]
 |=====
 
@@ -356,6 +364,7 @@ Med +_ | _5_
 
 ==== Interest-Influence Classification
 
+.Interest-Influence Classification
 [options="header",cols="1,1,1,4"]
 |=====
 
