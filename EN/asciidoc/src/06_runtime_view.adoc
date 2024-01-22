@@ -40,7 +40,7 @@ endif::arc42help[]
 
 User interaction with _project_name_ and error handling is pretty basic and simple.
 
-=== <Runtime Scenario 1 (Login procedure)>
+=== Runtime Scenario 1 (Login procedure)
 
 The following is the use case of the login procedure.
 

@@ -5,6 +5,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 === Table of involved stakeholders
 
+.Stakeholders list
 [orientation=landscape, options="header", cols="1,2,2,1"]
 |===
 | Name 
@@ -51,16 +52,22 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 ==== Component diagram 
 
+.Component diagram
 image:C4 Model Deployment Diagram for Housing System.jpg[]
 
 ==== Sequence diagram
 
+.Sequence diagram
 image:login.jpg[]
 
 ==== Mockup/Wireframe for password reset
+
+.Mockup/Wireframe
 image:mockup-reset-pw.png[]
 
 ==== Deployment diagram
+
+.Deployment diagram
 image:Deployment Diagram with Components.jpg[]
 
 ifdef::arc42help[]

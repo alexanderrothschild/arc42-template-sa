@@ -1,6 +1,7 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-context-and-scope]]
+== Context and Scope
 
 ifdef::arc42help[]
 [role="arc42help"]
@@ -26,8 +27,6 @@ See https://docs.arc42.org/section-3/[Context and Scope] in the arc42 documentat
 
 ****
 endif::arc42help[]
-
-== Context and Scope
 
 This chapter describes the environment and context of _Housing system_: Who uses the system and on which other system does _Housing system_ depend.
 

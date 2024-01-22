@@ -47,6 +47,8 @@ endif::arc42help[]
 
 === Quality Scenarios
 ==== Availability
+
+.ASR1
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description with possible values
@@ -60,6 +62,7 @@ alarm_
 | _Response Measure_ | no downtime
 |===
 
+.ASR2
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description with possible values
@@ -73,6 +76,8 @@ alarm_
 |===
 
 ==== Performance
+
+.ASR3
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description with possible values
@@ -86,6 +91,8 @@ alarm_
 |===
 
 ==== Security
+
+.ASR4
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description with possible values
@@ -99,6 +106,8 @@ alarm_
 |===
 
 ==== Modifiability
+
+.ASR5
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description with possible values
@@ -112,6 +121,8 @@ alarm_
 |===
 
 ==== Testability
+
+.ASR6
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description and possible Value
@@ -124,6 +135,7 @@ alarm_
 | _Response Measure_ | coverage, probability of finding additional faults given a fault, time to test, entire regression test suite completed in less than 24 hours
 |===
 
+.ASR7
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description with possible values
@@ -137,6 +149,8 @@ alarm_
 |===
 
 ==== Usability
+
+.ASR8
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description and possible Value
@@ -150,6 +164,8 @@ alarm_
 |===
 
 ==== Integrability
+
+.ASR9
 [options="header",cols="1,4"]
 |===
 |Portion of Scenario|Description and possible Value
@@ -164,6 +180,7 @@ alarm_
 
 === Quality Tree
 
+.Quality tree
 image:tree.png[]
 
 ifdef::arc42help[]
